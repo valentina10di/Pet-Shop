@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    width: 100%;
+  max-width: 690.8px;
+  margin: 80px auto;
+  padding: 0 16px;
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.digit {
+  width: clamp(80px, 18vw, 180px);
+  height: auto;
+  object-fit: contain;
+}
+
+.petImage {
+  width: clamp(120px, 35vw, 300px);
+  height: auto;
+  object-fit: contain;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 32px;
+  width: 100%;
+}
+
+.title {
+  font-weight: 700;
+  font-size: clamp(32px, 6vw, 64px);
+  line-height: 110%;
+  color: #282828;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: clamp(16px, 2.5vw, 20px);
+  line-height: 130%;
+  color: #8b8b8b;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.homeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  width: 209px;
+  height: 58px;
+  padding: 16px 56px;
+  background-color: #0d50ff;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.homeButton:hover {
+  background-color: #0b41ce;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 40px auto;
+  }
+
+  .homeButton {
+    width: 100%;
+    max-width: 280px;
+    height: 50px;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,52 @@
+.banner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(30px, 5.56vw, 80px) clamp(20px, 2.78vw, 40px)
+    clamp(60px, 14.58vw, 210px) clamp(20px, 2.78vw, 40px);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("../../assets/banner.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(20px, 2.78vw, 40px);
+}
+
+.title {
+  font-weight: 700;
+  font-size: clamp(26px, 6.67vw, 96px);
+  line-height: 110%;
+  color: #ffffff;
+  margin: 0;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d50ff;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: clamp(14px, 1.39vw, 20px);
+  line-height: 130%;
+  text-decoration: none;
+  padding: clamp(12px, 1.11vw, 16px) clamp(24px, 3.89vw, 56px);
+  border-radius: 6px;
+  border: none;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #003cd9;
+  transform: translateY(-2px);
+}

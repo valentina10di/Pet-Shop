@@ -1,0 +1,287 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainContainer {
+  max-width: 1360px;
+  width: 100%;
+  margin: clamp(20px, 3vw, 40px) auto clamp(40px, 6vw, 80px) auto;
+  padding: 0 clamp(16px, 3vw, 40px);
+  flex-grow: 1;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: clamp(20px, 3vw, 40px);
+}
+
+.line {
+  width: 16px;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.crumbBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  height: 36px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: clamp(14px, 1.2vw, 16px);
+  color: #8b8b8b;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+.crumbBtn:hover {
+  background-color: #f5f5f5;
+}
+
+.activeCrumb {
+  color: #282828;
+  border-color: #282828;
+}
+
+.title {
+  font-weight: 700;
+  font-size: clamp(24px, 4.5vw, 64px);
+  line-height: 110%;
+  color: #282828;
+  margin: 0 0 clamp(20px, 3vw, 40px) 0;
+}
+
+.filterSortContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(16px, 2.5vw, 40px);
+  margin-bottom: clamp(24px, 3.5vw, 40px);
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.filterLabel {
+  font-weight: 500;
+  font-size: clamp(14px, 1.2vw, 16px);
+  color: #282828;
+}
+
+.inputPrice {
+  width: 100px;
+  height: 36px;
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.inputPrice::placeholder {
+  color: #8b8b8b;
+}
+
+.checkboxInput {
+  width: 18px;
+  height: 18px;
+  accent-color: #0d50ff;
+  cursor: pointer;
+}
+
+.selectSort {
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: clamp(14px, 1.2vw, 16px);
+  color: #282828;
+  background-color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: clamp(16px, 2.2vw, 32px);
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: clamp(8px, 1vw, 12px);
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 316px;
+  min-height: 422px;
+  margin: 0 auto;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.discountBadge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #0d50ff;
+  color: #fff;
+  font-weight: 600;
+  font-size: clamp(14px, 1.2vw, 20px);
+  width: clamp(55px, 4.5vw, 67px);
+  height: clamp(30px, 2.3vw, 34px);
+  aspect-ratio: 67 / 34;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addToCartBtn {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  background-color: #0d50ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  height: 40px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0;
+  transition:
+    opacity 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.card:hover .addToCartBtn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.addToCartBtn:hover {
+  background-color: #212529;
+  color: #ffffff;
+}
+
+.addToCartBtn.added {
+  background-color: #ffffff;
+  color: #212529;
+  border-color: #212529;
+  opacity: 1;
+  visibility: visible;
+}
+
+.infoWrapper {
+  padding: clamp(12px, 1.5vw, 20px) clamp(12px, 1.5vw, 20px)
+    clamp(16px, 2vw, 24px) clamp(12px, 1.5vw, 20px);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.productTitle {
+  font-weight: 500;
+  font-size: clamp(16px, 1.5vw, 20px);
+  line-height: 130%;
+  color: #282828;
+  margin: 0 0 clamp(12px, 1.5vw, 16px) 0;
+  overflow: hidden;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.currentPrice {
+  font-weight: 600;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 110%;
+  color: #282828;
+}
+
+.oldPrice {
+  font-weight: 500;
+  font-size: clamp(16px, 1.5vw, 20px);
+  line-height: 130%;
+  text-decoration: line-through;
+  color: #8b8b8b;
+}
+
+.loading,
+.error,
+.noProducts {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 1200px) {
+  .cardsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 768px) {
+    .breadcrumbs {
+      gap: 12px;
+    }
+
+    .line {
+      display: none;
+    }
+  }
+
+  .filterSortContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

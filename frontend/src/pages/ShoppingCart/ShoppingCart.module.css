@@ -1,0 +1,755 @@
+.mainContainer {
+  width: 100%;
+  max-width: 1360px;
+  margin: clamp(20px, 3vw, 40px) auto clamp(40px, 6vw, 80px) auto;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: clamp(24px, 4vw, 40px);
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 700;
+  color: #282828;
+  line-height: 110%;
+  margin: 0;
+}
+
+.line {
+  border: 1px solid #ddd;
+  flex-grow: 1;
+  height: 1px;
+  margin-left: 32px;
+}
+
+.backToStoreBtn {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: clamp(14px, 1.2vw, 16px);
+  font-weight: 500;
+  color: #282828;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.backToStoreBtn:hover {
+  background: #f5f5f5;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 780px) minmax(320px, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.cartList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cartCard {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 780px;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+}
+
+.cardImage {
+  width: clamp(120px, 22vw, 200px);
+  height: 100%;
+  aspect-ratio: 200 / 180;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  flex-shrink: 0;
+}
+
+.cardInfo {
+  padding: clamp(12px, 2vw, 32px);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(12px, 2vw, 32px);
+}
+
+.cardTopRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cardTitle {
+  font-size: clamp(14px, 1.5vw, 20px);
+  font-weight: 500;
+  color: #282828;
+  overflow: hidden;
+}
+
+.removeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardBottomRow {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(12px, 2vw, 32px);
+
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #fff;
+  height: 58px;
+  width: 200px;
+}
+
+.counterBtn {
+  background: none;
+  border: none;
+  flex-grow: 1;
+  cursor: pointer;
+  color: #8b8b8b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counterValue {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  width: 96px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #282828;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.priceWrapper {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(8px, 1.5vw, 16px);
+  flex-wrap: wrap;
+}
+
+.currentPrice {
+  font-size: clamp(24px, 3vw, 40px);
+  font-weight: 700;
+  color: #282828;
+}
+
+.oldPrice {
+  font-weight: 500;
+  font-size: clamp(14px, 1.5vw, 20px);
+  line-height: 130%;
+  text-decoration: line-through;
+  color: #8b8b8b;
+}
+
+.orderDetails {
+  background: #f1f3f4;
+  border-radius: 12px;
+  padding: clamp(20px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.orderTitle {
+  font-weight: 700;
+  font-size: clamp(28px, 3.5vw, 40px);
+  line-height: 110%;
+  color: #282828;
+  margin: 0;
+}
+
+.orderSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 24px;
+}
+
+.summaryRow {
+  display: flex;
+}
+
+.summaryLabel {
+  font-weight: 500;
+  font-size: clamp(24px, 3.5vw, 40px);
+  line-height: 130%;
+  color: #8b8b8b;
+}
+
+.summaryTotalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.totalLabel {
+  font-weight: 500;
+  font-size: clamp(24px, 3.5vw, 40px);
+  line-height: 130%;
+  color: #8b8b8b;
+}
+
+.totalSum {
+  font-weight: 700;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 110%;
+  color: #282828;
+}
+
+.orderForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.formInput {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 16px;
+  outline: none;
+  background: #fff;
+  height: 50px;
+  width: 100%;
+}
+
+.formInput:focus {
+  border-color: #0d50ff;
+}
+
+.inputError {
+  border-color: #ff3b30;
+}
+
+.errorText {
+  font-size: 12px;
+  color: #ff3b30;
+}
+
+.orderSubmitBtn {
+  background: #0d50ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  height: 58px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.orderSubmitBtn:hover {
+  background: #003fd8;
+}
+
+.emptyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 40px 0;
+}
+
+.emptyText {
+  font-size: 20px;
+  color: #282828;
+  margin: 0;
+}
+
+.continueShoppingBtn {
+  background: #0d50ff;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: clamp(16px, 4vw, 32px); 
+}
+
+
+.modalContainer {
+  position: relative;
+  background-color: #0d53fc;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 548px;
+  padding: clamp(10px, 5vw, 32px);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.modalTitle {
+  font-weight: 600;
+  font-size: clamp(26px, 5vw, 40px);
+  line-height: 110%;
+  color: #fff;
+}
+
+.modalTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 424px;
+}
+
+.modalText {
+  font-weight: 600;
+  font-size: clamp(16px, 2.5vw, 20px);
+  line-height: 110%;
+  color: #fff;
+}
+
+.modalCloseBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1200px) {
+  .mainContainer {
+    padding: 0 32px;
+  }
+
+  .contentGrid {
+    grid-template-columns: minmax(0, 1.5fr) minmax(320px, 1fr);
+    gap: 24px;
+  }
+
+  .cartCard {
+    height: 170px;
+  }
+
+  .counter {
+    width: 180px;
+  }
+
+  .counterValue {
+    width: 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  .mainContainer {
+    padding: 0 24px;
+    margin-top: 32px;
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .cartCard {
+    max-width: 100%;
+  }
+
+  .orderDetails {
+    width: 100%;
+  }
+
+  .line {
+    margin-left: 24px;
+  }
+
+  .title {
+    font-size: clamp(40px, 6vw, 56px);
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    padding: 0 20px;
+    margin: 24px auto 60px;
+  }
+
+  .topRow {
+    align-items: center;
+    gap: 16px;
+  }
+
+  .title {
+    font-size: clamp(36px, 7vw, 48px);
+  }
+
+  .line {
+    margin-left: 16px;
+  }
+
+  .backToStoreBtn {
+    padding: 8px 14px;
+  }
+
+  .cartList {
+    gap: 12px;
+  }
+
+  .cartCard {
+    height: 160px;
+  }
+
+  .cardImage {
+    width: 160px;
+  }
+
+  /* .cardInfo {
+    padding: 16px;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  } */
+
+  .counter {
+    width: 160px;
+    height: 42px;
+  }
+
+  .counterValue {
+    width: 64px;
+    font-size: 18px;
+  }
+
+  .counterBtn img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .currentPrice {
+    font-size: 32px;
+  }
+
+  .oldPrice {
+    font-size: 16px;
+  }
+
+  .orderDetails {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .orderTitle {
+    font-size: 32px;
+  }
+
+  .summaryLabel,
+  .totalLabel {
+    font-size: 28px;
+  }
+
+  .totalSum {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mainContainer {
+    padding: 0 16px;
+    margin: 20px auto 48px;
+  }
+
+  .topRow {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .title {
+    font-size: 40px;
+    width: 100%;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .backToStoreBtn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .contentGrid {
+    gap: 24px;
+  }
+
+  .cartList {
+    gap: 12px;
+  }
+
+  .cartCard {
+    height: 150px;
+    border-radius: 10px;
+  }
+
+  .cardImage {
+    width: 110px;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .cardInfo {
+    padding: 12px;
+    min-width: 0;
+  }
+
+  .cardTopRow {
+  gap: 10px;
+}
+
+.removeBtn img {
+  width: 14px;
+  height: 14px;
+}
+
+  .cardBottomRow {
+    gap: 8px;
+  }
+
+  .counter {
+    width: 140px;
+    height: 46px;
+    flex-shrink: 0;
+  }
+
+  .counterValue {
+    width: 48px;
+    font-size: 16px;
+  }
+
+  .counterBtn img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .currentPrice {
+    font-size: 28px;
+  }
+
+  .oldPrice {
+    font-size: 14px;
+  }
+
+  .priceWrapper {
+    gap: 6px;
+  }
+
+  .orderDetails {
+    padding: 20px 16px;
+    border-radius: 10px;
+    gap: 20px;
+  }
+
+  .orderTitle {
+    font-size: 28px;
+  }
+
+  .orderSummary {
+    padding-bottom: 20px;
+  }
+
+  .summaryLabel,
+  .totalLabel {
+    font-size: 24px;
+  }
+
+  .totalSum {
+    font-size: 36px;
+  }
+
+  .orderForm {
+    gap: 12px;
+  }
+
+  .formInput {
+    height: 48px;
+    padding: 10px 14px;
+  }
+
+  .orderSubmitBtn {
+    height: 52px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .mainContainer {
+    padding: 0 12px;
+    margin-top: 16px;
+  }
+
+  .title {
+    font-size: 34px;
+    line-height: 110%;
+  }
+
+  .topRow {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .backToStoreBtn {
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+
+  .cartCard {
+    height: 135px;
+  }
+
+  .cardImage {
+    width: 90px;
+  }
+
+  .cardInfo {
+    padding: 10px;
+  }
+
+  .cardTitle {
+    font-size: 14px;
+    line-height: 115%;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+  }
+
+  .removeBtn {
+    top: 5px;
+    right: 5px;
+    font-size: 13px;
+  }
+
+  .cardBottomRow {
+    gap: 6px;
+  }
+
+  .counter {
+    width: 112px;
+    height: 40px;
+  }
+
+  .counterValue {
+    width: 38px;
+    font-size: 14px;
+  }
+
+  .counterBtn {
+    padding: 0;
+  }
+
+  .counterBtn img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .currentPrice {
+    font-size: 23px;
+  }
+
+  .oldPrice {
+    font-size: 12px;
+  }
+
+  .priceWrapper {
+    gap: 4px;
+  }
+
+  .orderDetails {
+    padding: 16px 12px;
+    gap: 16px;
+  }
+
+  .orderTitle {
+    font-size: 25px;
+  }
+
+  .summaryLabel,
+  .totalLabel {
+    font-size: 21px;
+  }
+
+  .totalSum {
+    font-size: 30px;
+  }
+
+  .formInput {
+    height: 46px;
+    font-size: 14px;
+  }
+
+  .orderSubmitBtn {
+    height: 48px;
+    font-size: 16px;
+  }
+}
+

@@ -1,0 +1,119 @@
+.header {
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 100%;
+  padding: clamp(16px, 2vw, 28px) clamp(16px, 2.9vw, 40px)
+    clamp(18px, 2.1vw, 30px);
+  border-bottom: 1px solid #ddd;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(20px, 4vw, 60px);
+}
+
+.nav {
+  width: 100%;
+  max-width: 518px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(12px, 2vw, 32px);
+}
+
+.navLink {
+  text-decoration: none;
+  font-weight: 500;
+  color: #282828;
+  font-weight: 500;
+  font-size: clamp(13px, 1.15vw, 20px);
+  text-align: center;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: #0047ff;
+}
+
+.logo {
+  width: clamp(44px, 5vw, 70px);
+  height: clamp(44px, 5vw, 70px);
+  object-fit: contain;
+}
+
+.cartIcon {
+  width: clamp(32px, 3.4vw, 48px);
+  height: clamp(32px, 3.4vw, 48px);
+}
+
+.cartLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.badge {
+  position: absolute;
+   top: clamp(0px, 0.4vw, 6px);
+  right: clamp(20px, 2.1vw, 30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(20px, 1.85vw, 26px);
+  height: clamp(20px, 1.85vw, 26px);
+  background-color: #0047ff;
+  font-weight: 600;
+  font-size: clamp(9px, 0.85vw, 12px);
+  line-height: 90%;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+}
+
+@media (max-width: 700px) {
+  .container {
+    gap: clamp(10px, 3vw, 20px);
+  }
+  .nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(8px, 2vw, 16px);
+    width: 100%;
+    max-width: 320px;
+  }
+  .navLink {
+    font-size: clamp(12px, 2.2vw, 15px);
+  }
+} 
+@media (max-width: 400px) {
+  .header {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .container {
+    gap: 8px;
+  }
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  .cartIcon {
+    width: 28px;
+    height: 28px;
+  }
+  .nav {
+    max-width: 260px;
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+  .navLink {
+    font-size: 12px;
+  }
+}
+
+
